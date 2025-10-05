@@ -9,11 +9,113 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
 </head>
  <style>
-    body {
-      font-family: "Tajawal", sans-serif;
-    
-      text-align: right;
-    }
+   /* Base Styles (already mostly handled by Tailwind) */
+body {
+  font-family: "Tajawal", sans-serif;
+  text-align: right;
+}
+
+/* FAQ Answer Hidden by Default */
+.faq-answer {
+  display: none;
+}
+
+/* FAQ Item Active */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* FAQ Question cursor */
+.faq-question {
+  cursor: pointer;
+}
+
+/* ===================== Responsive Breakpoints ===================== */
+
+/* ≤ 1024px */
+@media (max-width: 1024px) {
+  main {
+    max-width: 3xl; /* slightly smaller container */
+    padding: 8px 16px;
+  }
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 12px 16px;
+  }
+  .faq-answer {
+    font-size: 0.875rem;
+  }
+}
+
+/* ≤ 820px */
+@media (max-width: 820px) {
+  main {
+    max-width: 2xl;
+    padding: 6px 12px;
+  }
+  .faq-question {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+  .faq-answer {
+    font-size: 0.85rem;
+  }
+}
+
+/* ≤ 768px */
+@media (max-width: 768px) {
+  main {
+    max-width: xl;
+    padding: 5px 10px;
+  }
+  .faq-question {
+    font-size: 0.875rem;
+    padding: 8px 10px;
+  }
+  .faq-answer {
+    font-size: 0.825rem;
+  }
+}
+
+/* ≤ 480px */
+@media (max-width: 480px) {
+  main {
+    max-width: full;
+    padding: 4px 8px;
+  }
+  header h1 {
+    font-size: 1.5rem; /* smaller header */
+  }
+  .faq-question {
+    font-size: 0.825rem;
+    padding: 6px 8px;
+  }
+  .faq-answer {
+    font-size: 0.8rem;
+  }
+}
+
+/* ≤ 375px */
+@media (max-width: 375px) {
+  main {
+    max-width: full;
+    padding: 2px 6px;
+  }
+  header h1 {
+    font-size: 1.25rem;
+  }
+  header p {
+    font-size: 0.75rem;
+  }
+  .faq-question {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+  }
+  .faq-answer {
+    font-size: 0.7rem;
+  }
+}
+
   </style>
 <body>
     <div class="container">
@@ -179,4 +281,5 @@
 </body>
 
 </html>
+
 
